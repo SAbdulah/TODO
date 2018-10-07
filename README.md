@@ -7,4 +7,6 @@
 (6) Prepare some slides for ExaGeoStat Meeting.<br />
 (7) AUS Interview.<br />
 (8) ISC Paper.<br />
-
+(9) Shaheen Project Proposal
+(10) Presentation for meeting on Tuesdar 10/9/2018  (4 pm)
+(11) Prepare for meeitn gon 10/8/2018 (1 pm)
