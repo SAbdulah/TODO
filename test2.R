@@ -1,6 +1,7 @@
 install.packages(lib="./R-libraries", repos="http://cran.us.r-project.org", "RhpcBLASctl")
 install.packages(lib="./R-libraries", "exageostat_0.1.0.tar.gz")
-library("exageostat")                                           #Load ExaGeoStat-R lib.
+library("RhpcBLASctl", lib.loc="./R-libraries")                                           #Load RhpcBLASctl lib.
+library("exageostat", lib.loc="./R-libraries")                                           #Load ExaGeoStat-R lib.
 seed            = 0                                             #Initial seed to generate XY locs.
 theta1          = 1                                             #Initial variance.
 theta2          = 0.1                                          #Initial range.

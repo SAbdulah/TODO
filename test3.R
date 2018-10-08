@@ -14,7 +14,8 @@
  #
  # @author Sameh Abdulah
  # @date 2018-07-04
-library("exageostat")                                           #Load ExaGeoStat-R lib.
+library("RhpcBLASctl", lib.loc="./R-libraries")                                           #Load RhpcBLASctl lib.
+library("exageostat", lib.loc="./R-libraries")                                           #Load ExaGeoStat-R lib.
 seed            = 0                                             #Initial seed to generate XY locs.
 theta1          = 1                                             #Initial variance.
 theta2          = 0.1                                          #Initial smoothness.
