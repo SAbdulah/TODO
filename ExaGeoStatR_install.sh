@@ -8,6 +8,8 @@ module load hwloc/1.11.8-gcc-7.2.0
 module load starpu/1.2.4-gcc-7.2.0-mkl-openmpi-3.0.0
 module load hdf5/1.10.1-gcc-7.2.0
 module load netcdf/4.5.0-gcc-7.2.0
+module load r
+
 
 sed -i '/## EXAGEOSTAT-INSTALLATION-BEGIN/,/## EXAGEOSTAT-INSTALLATION-END/d'  ~/.bashrc
 echo '## EXAGEOSTAT-INSTALLATION-BEGIN' >> ~/.bashrc
@@ -23,7 +25,11 @@ echo 'module load hwloc/1.11.8-gcc-7.2.0' >> ~/.bashrc
 echo 'module load starpu/1.2.4-gcc-7.2.0-mkl-openmpi-3.0.0' >> ~/.bashrc
 echo 'module load hdf5/1.10.1-gcc-7.2.0' >> ~/.bashrc
 echo 'module load netcdf/4.5.0-gcc-7.2.0' >> ~/.bashrc
+echo 'module load r' >> ~/.bashrc
 
+MKL_DIR=/opt/intel/mkl
+echo '. '$MKLROOT'/bin/mklvars.sh intel64' >> ~/.bashrc
+echo 'export MKLROOT='$MKL_DIR >> ~/.bashrc
 
 
 rm -rf exageostatR-dev
@@ -43,7 +49,7 @@ cd $STARSHDIR
 rm -rf build
 mkdir -p build
 cd build
-cmake .. -DCMAKE_INSTALL_PREFIX=$STARSHDIR/build -DMPI=OFF -DOPENMP=OFF -DSTARPU=OFF -DCMAKE_C_FLAGS="-fPIC"
+CC=gcc cmake .. -DCMAKE_INSTALL_PREFIX=$STARSHDIR/build -DMPI=OFF -DOPENMP=OFF -DSTARPU=OFF -DCMAKE_C_FLAGS="-fPIC"
 make -j
 make install
 
@@ -55,7 +61,7 @@ cd $CHAMELEONDIR
 rm -rf build
 mkdir -p build
 cd build
-cmake .. -DCMAKE_INSTALL_PREFIX=$CHAMELEONDIR/build -DCMAKE_BUILD_TYPE=Debug -DCHAMELEON_USE_MPI=OFF -DCHAMELEON_ENABLE_EXAMPLE=OFF -DCHAMELEON_ENABLE_TESTING=OFF -DCHAMELEON_ENABLE_TIMING=OFF -DBUILD_SHARED_LIBS:BOOL=ON # -DCMAKE_C_FLAGS="-fPIC"
+CC=gcc cmake .. -DCMAKE_INSTALL_PREFIX=$CHAMELEONDIR/build -DCMAKE_BUILD_TYPE=Debug -DCHAMELEON_USE_MPI=OFF -DCHAMELEON_ENABLE_EXAMPLE=OFF -DCHAMELEON_ENABLE_TESTING=OFF -DCHAMELEON_ENABLE_TIMING=OFF -DBUILD_SHARED_LIBS:BOOL=ON # -DCMAKE_C_FLAGS="-fPIC"
 make -j # CHAMELEON parallel build seems to be fixed
 make install
 
@@ -67,7 +73,7 @@ cd $HICMADIR
 rm -rf build
 mkdir -p build
 cd build
-cmake .. -DCMAKE_INSTALL_PREFIX=$HICMADIR/build -DHICMA_USE_MPI=OFF -DHICMA_ENABLE_TESTING=OFF -DHICMA_ENABLE_TIMING=OFF -DBUILD_SHARED_LIBS:BOOL=ON # -DCMAKE_C_FLAGS="-fPIC"
+CC=gcc cmake .. -DCMAKE_INSTALL_PREFIX=$HICMADIR/build -DHICMA_USE_MPI=OFF -DHICMA_ENABLE_TESTING=OFF -DHICMA_ENABLE_TIMING=OFF -DBUILD_SHARED_LIBS:BOOL=ON # -DCMAKE_C_FLAGS="-fPIC"
 make -j
 make install
 
