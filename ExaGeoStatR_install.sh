@@ -61,5 +61,6 @@ export CPATH=$CPATH:/usr/local/include/coreblas && \
 export LIBRARY_PATH="$LD_LIBRARY_PATH"
 
 ## Modify src/Makefile, compilation flagss -> flagsl
-R CMD build . && \
-R CMD INSTALL ./exageostat_0.1.0.tar.gz
+R CMD build exageostatR-dev
+mkdir R-libraries
+R CMD INSTALL --library=./R-libraries ./exageostat_0.1.0.tar.gz
