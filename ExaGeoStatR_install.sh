@@ -46,6 +46,12 @@ cmake .. -DCMAKE_INSTALL_PREFIX=$HICMADIR/build -DHICMA_USE_MPI=OFF -DHICMA_ENAB
 make -j
 make install
 
+export PKG_CONFIG_PATH=$STARSHDIR/build/lib/pkgconfig:$PKG_CONFIiG_PATH
+export PKG_CONFIG_PATH=$CHAMELEONDIR/build/lib/pkgconfig:$PKG_CONFIG_PATH
+export PKG_CONFIG_PATH=$HICMADIR/build/lib/pkgconfig:$PKG_CONFIG_PATH
+
+
+
 cd $EXAGEOSTATDEVDIR/..
 export CPATH=$CPATH:/usr/local/include/coreblas && \
 #export LD_LIBRARY_PATH="${MKLROOT}/lib/intel64_lin:$LD_LIBRARY_PATH" && \
