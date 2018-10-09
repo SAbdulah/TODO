@@ -7,8 +7,8 @@
 (6) Prepare some slides for ExaGeoStat Meeting.<br />
 (7) AUS Interview.<br />
 (8) ISC Paper.<br />
-(9) Shaheen Project Proposal
-(10) Presentation for meeting on Tuesdar 10/9/2018  (4 pm)
-(11) Prepare for meeitn gon 10/8/2018 (1 pm)
-(12) Rabab: Memory software(after IPDPS).
-(13) Rabab: Python scripts(after IPDPS).
+(9) Shaheen Project Proposal<br />
+(10) Presentation for meeting on Tuesday 10/9/2018  (4 pm)<br />
+(11) Prepare for meeitn gon 10/8/2018 (1 pm)<br />
+(12) Rabab: Memory software(after IPDPS).<br />
+(13) Rabab: Python scripts(after IPDPS).<br />
