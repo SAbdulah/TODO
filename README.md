@@ -10,3 +10,5 @@
 (9) Shaheen Project Proposal
 (10) Presentation for meeting on Tuesdar 10/9/2018  (4 pm)
 (11) Prepare for meeitn gon 10/8/2018 (1 pm)
+(12) Rabab: Memory software(after IPDPS).
+(13) Rabab: Python scripts(after IPDPS).
