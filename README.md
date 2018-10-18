@@ -12,3 +12,4 @@
 (13) Rabab: Python scripts(after IPDPS).<br />
 (14) estimate the accuracy of single precision. <br />
 (15) out of core with Shaheen.
+today read this paper: COMPASS: Compact array storage with value index
