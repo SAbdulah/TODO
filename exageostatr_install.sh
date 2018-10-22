@@ -27,7 +27,7 @@ MKL_DIR=/opt/intel/mkl
 echo '. '$MKLROOT'/bin/mklvars.sh intel64' >> ~/.bashrc
 echo 'export MKLROOT='$MKL_DIR >> ~/.bashrc
 
-
+mkdir R-libraries
 rm -rf exageostatR-dev
 git clone https://github.com/ecrc/exageostatR-dev.git
 export DIR=$PWD
