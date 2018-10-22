@@ -7,7 +7,7 @@ module load hwloc/1.11.8-gcc-7.2.0
 module load starpu/1.2.4-gcc-7.2.0-mkl-openmpi-3.0.0
 module load hdf5/1.10.1-gcc-7.2.0
 module load netcdf/4.5.0-gcc-7.2.0
-module load r
+module load r-base/3.5.1-intel-2018
 
 
 
@@ -22,7 +22,8 @@ echo 'module load hwloc/1.11.8-gcc-7.2.0' >> ~/.bashrc
 echo 'module load starpu/1.2.4-gcc-7.2.0-mkl-openmpi-3.0.0' >> ~/.bashrc
 echo 'module load hdf5/1.10.1-gcc-7.2.0' >> ~/.bashrc
 echo 'module load netcdf/4.5.0-gcc-7.2.0' >> ~/.bashrc
-echo 'module load r' >> ~/.bashrc
+echo 'module load r-base/3.5.1-intel-2018' >> ~/.bashrc
+
 
 MKL_DIR=/opt/intel/mkl
 echo '. '$MKLROOT'/bin/mklvars.sh intel64' >> ~/.bashrc
