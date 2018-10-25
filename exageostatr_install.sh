@@ -1,13 +1,16 @@
 module load ecrc-extras
 module load mkl/2018-update-1
 module load gcc/7.2.0
+module load intel/2018
 module load cmake/3.11.1
 module load gsl/2.4-gcc-7.2.0
 module load hwloc/1.11.8-gcc-7.2.0
 module load starpu/1.2.4-gcc-7.2.0-mkl-openmpi-3.0.0
 module load hdf5/1.10.1-gcc-7.2.0
 module load netcdf/4.5.0-gcc-7.2.0
+module load pcre/8.40
 module load r-base/3.5.1-intel-2018
+
 
 
 sed -i '/## EXAGEOSTAT-INSTALLATION-BEGIN/,/## EXAGEOSTAT-INSTALLATION-END/d'  ~/.bashrc
@@ -15,19 +18,22 @@ echo '## EXAGEOSTAT-INSTALLATION-BEGIN' >> ~/.bashrc
 echo 'module load ecrc-extras' >> ~/.bashrc
 echo 'module load mkl/2018-update-1' >> ~/.bashrc
 echo 'module load gcc/7.2.0' >> ~/.bashrc
+echo 'module load intel/2018' >> ~/.bashrc
 echo 'module load cmake/3.11.1' >> ~/.bashrc
 echo 'module load gsl/2.4-gcc-7.2.0' >> ~/.bashrc
 echo 'module load hwloc/1.11.8-gcc-7.2.0' >> ~/.bashrc
 echo 'module load starpu/1.2.4-gcc-7.2.0-mkl-openmpi-3.0.0' >> ~/.bashrc
 echo 'module load hdf5/1.10.1-gcc-7.2.0' >> ~/.bashrc
 echo 'module load netcdf/4.5.0-gcc-7.2.0' >> ~/.bashrc
+echo 'module load pcre/8.40' >> ~/.bashrc
 echo 'module load r-base/3.5.1-intel-2018' >> ~/.bashrc
+
 
 MKL_DIR=/opt/intel/mkl
 echo '. '$MKLROOT'/bin/mklvars.sh intel64' >> ~/.bashrc
 echo 'export MKLROOT='$MKL_DIR >> ~/.bashrc
 
-mkdir R-libraries
+
 rm -rf exageostatR-dev
 git clone https://github.com/ecrc/exageostatR-dev.git
 export DIR=$PWD
@@ -48,7 +54,9 @@ echo 'export PKG_CONFIG_PATH='$NLOPTROOT'/nlopt_install/lib/pkgconfig:$PKG_CONFI
 cd $DIR
 cd exageostatR-dev/
 git checkout sabdulah/fix-srand-bug
+git pull
 git submodule update --init --recursive
+
 export EXAGEOSTATDEVDIR=$PWD/src
 cd $EXAGEOSTATDEVDIR
 export HICMADIR=$EXAGEOSTATDEVDIR/hicma-dev
@@ -78,8 +86,8 @@ make install
 
 export PKG_CONFIG_PATH=$CHAMELEONDIR/install_dir/lib/pkgconfig:$PKG_CONFIG_PATH
 echo 'export PKG_CONFIG_PATH='$CHAMELEONDIR'/install_dir/lib/pkgconfig:$PKG_CONFIG_PATH' >> ~/.bashrc
-export CPATH=$CPATH:$CHAMELEONDIR/install_dir/include/coreblas
-echo 'export CPATH='$CHAMELEONDIR'/install_dir/include/coreblas' >> ~/.bashrc
+export CPATH='$CPATH:$CHAMELEONDIR/install_dir/include/coreblas'
+echo 'export CPATH='$CHAMELEONDIR'/install_dir/include/coreblas:$CPATH' >> ~/.bashrc
 echo 'export LD_LIBRARY_PATH='$CHAMELEONDIR'/install_dir/lib/:$LD_LIBRARY_PATH' >> ~/.bashrc
 
 
@@ -103,8 +111,10 @@ cd $DIR
 #export LIBRARY_PATH="$LD_LIBRARY_PATH"
 echo $PWD
 
+. ~/.bashrc
 ## Modify src/Makefile, compilation flagss -> flagsl
 R CMD build exageostatR-dev
+
 
 #mkdir R-libraries
 #R CMD INSTALL --library=./R-libraries --repos="http://cran.us.r-project.org"  RhpcBLASctl
