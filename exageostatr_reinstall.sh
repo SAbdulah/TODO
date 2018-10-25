@@ -49,8 +49,10 @@ echo 'export PKG_CONFIG_PATH='$NLOPTROOT'/nlopt_install/lib/pkgconfig:$PKG_CONFI
 ==============================
 cd $DIR
 cd exageostatR-dev/
-git checkout sabdulah/gen-locs-with-seed
-#git submodule update --init --recursive
+git checkout sabdulah/fix-srand-bug
+git pull
+git submodule update --init --recursive
+
 export EXAGEOSTATDEVDIR=$PWD/src
 cd $EXAGEOSTATDEVDIR
 export HICMADIR=$EXAGEOSTATDEVDIR/hicma-dev
@@ -80,8 +82,8 @@ make install
 
 export PKG_CONFIG_PATH=$CHAMELEONDIR/install_dir/lib/pkgconfig:$PKG_CONFIG_PATH
 echo 'export PKG_CONFIG_PATH='$CHAMELEONDIR'/install_dir/lib/pkgconfig:$PKG_CONFIG_PATH' >> ~/.bashrc
-export CPATH=$CPATH:$CHAMELEONDIR/install_dir/include/coreblas
-echo 'export CPATH='$CHAMELEONDIR'/install_dir/include/coreblas' >> ~/.bashrc
+export CPATH='$CPATH:$CHAMELEONDIR/install_dir/include/coreblas'
+echo 'export CPATH='$CHAMELEONDIR'/install_dir/include/coreblas:$CPATH' >> ~/.bashrc
 echo 'export LD_LIBRARY_PATH='$CHAMELEONDIR'/install_dir/lib/:$LD_LIBRARY_PATH' >> ~/.bashrc
 
 
