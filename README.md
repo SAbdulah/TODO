@@ -13,3 +13,6 @@
 (14) estimate the accuracy of single precision. <br />
 (15) out of core with Shaheen.
 today read this paper: COMPASS: Compact array storage with value index
+(16) non-stationary kernel (Yuxaio) in ExaGeoStat.
+(17) read EM algorithm Paper.
+
