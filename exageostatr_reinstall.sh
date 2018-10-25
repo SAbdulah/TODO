@@ -1,12 +1,14 @@
 module load ecrc-extras
 module load mkl/2018-update-1
 module load gcc/7.2.0
+module load intel/2018
 module load cmake/3.11.1
 module load gsl/2.4-gcc-7.2.0
 module load hwloc/1.11.8-gcc-7.2.0
 module load starpu/1.2.4-gcc-7.2.0-mkl-openmpi-3.0.0
 module load hdf5/1.10.1-gcc-7.2.0
 module load netcdf/4.5.0-gcc-7.2.0
+module load pcre/8.40
 module load r-base/3.5.1-intel-2018
 
 
@@ -16,12 +18,14 @@ echo '## EXAGEOSTAT-INSTALLATION-BEGIN' >> ~/.bashrc
 echo 'module load ecrc-extras' >> ~/.bashrc
 echo 'module load mkl/2018-update-1' >> ~/.bashrc
 echo 'module load gcc/7.2.0' >> ~/.bashrc
+echo 'module load intel/2018' >> ~/.bashrc
 echo 'module load cmake/3.11.1' >> ~/.bashrc
 echo 'module load gsl/2.4-gcc-7.2.0' >> ~/.bashrc
 echo 'module load hwloc/1.11.8-gcc-7.2.0' >> ~/.bashrc
 echo 'module load starpu/1.2.4-gcc-7.2.0-mkl-openmpi-3.0.0' >> ~/.bashrc
 echo 'module load hdf5/1.10.1-gcc-7.2.0' >> ~/.bashrc
 echo 'module load netcdf/4.5.0-gcc-7.2.0' >> ~/.bashrc
+echo 'module load pcre/8.40' >> ~/.bashrc
 echo 'module load r-base/3.5.1-intel-2018' >> ~/.bashrc
 
 
@@ -107,8 +111,10 @@ cd $DIR
 #export LIBRARY_PATH="$LD_LIBRARY_PATH"
 echo $PWD
 
+. ~/.bashrc
 ## Modify src/Makefile, compilation flagss -> flagsl
 R CMD build exageostatR-dev
+
 
 #mkdir R-libraries
 #R CMD INSTALL --library=./R-libraries --repos="http://cran.us.r-project.org"  RhpcBLASctl
