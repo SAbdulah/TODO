@@ -9,7 +9,7 @@ module load starpu/1.2.4-gcc-7.2.0-mkl-openmpi-3.0.0
 module load hdf5/1.10.1-gcc-7.2.0
 module load netcdf/4.5.0-gcc-7.2.0
 module load pcre/8.40
-module load r-base/3.5.1-intel-2018
+module load r-base/3.5.1-mkl
 
 
 
@@ -26,7 +26,7 @@ echo 'module load starpu/1.2.4-gcc-7.2.0-mkl-openmpi-3.0.0' >> ~/.bashrc
 echo 'module load hdf5/1.10.1-gcc-7.2.0' >> ~/.bashrc
 echo 'module load netcdf/4.5.0-gcc-7.2.0' >> ~/.bashrc
 echo 'module load pcre/8.40' >> ~/.bashrc
-echo 'module load r-base/3.5.1-intel-2018' >> ~/.bashrc
+echo 'module load r-base/3.5.1-mkl' >> ~/.bashrc
 
 
 MKL_DIR=/opt/intel/mkl
@@ -54,8 +54,8 @@ echo 'export PKG_CONFIG_PATH='$NLOPTROOT'/nlopt_install/lib/pkgconfig:$PKG_CONFI
 cd $DIR
 cd exageostatR-dev/
 git checkout sabdulah/fix-srand-bug
-git pull
-git submodule update --init --recursive
+#git pull
+#git submodule update --init --recursive
 
 export EXAGEOSTATDEVDIR=$PWD/src
 cd $EXAGEOSTATDEVDIR

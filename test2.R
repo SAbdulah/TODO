@@ -1,4 +1,4 @@
-install.packages(lib="./R-libraries", repos="http://cran.us.r-project.org", "RhpcBLASctl")
+install.packages(lib="./R-libraries", "RhpcBLASctl_0.18-205.tar.gz")
 install.packages(lib="./R-libraries", "exageostat_0.1.0.tar.gz")
 library("RhpcBLASctl", lib.loc="./R-libraries")                                           #Load RhpcBLASctl lib.
 library("exageostat", lib.loc="./R-libraries")                                           #Load ExaGeoStat-R lib.
