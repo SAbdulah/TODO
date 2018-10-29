@@ -117,5 +117,3 @@ R CMD build exageostatR-dev
 
 
 #mkdir R-libraries
-#R CMD INSTALL --library=./R-libraries --repos="http://cran.us.r-project.org"  RhpcBLASctl
-#R CMD INSTALL --library=./R-libraries ./exageostat_0.1.0.tar.gz
