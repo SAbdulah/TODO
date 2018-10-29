@@ -54,7 +54,7 @@ echo 'export PKG_CONFIG_PATH='$NLOPTROOT'/nlopt_install/lib/pkgconfig:$PKG_CONFI
 cd $DIR
 cd exageostatR-dev/
 git checkout sabdulah/fix-srand-bug
-#git pull
+git pull
 #git submodule update --init --recursive
 
 export EXAGEOSTATDEVDIR=$PWD/src
