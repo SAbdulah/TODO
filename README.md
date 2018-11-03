@@ -18,3 +18,8 @@
 (19) 3 slides for David<br />
 (20) Handout.<br />
 (21) Release.<br />
+Tomorrow
+(1) David's Slides.
+(2) Tutorial ExaGeoStatR.
+(3) Documentations (ExaGeoStat).
+(4) Handout.
