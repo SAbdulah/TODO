@@ -19,8 +19,8 @@
 (20) Handout.<br />
 (21) Release.<br />
 Tomorrow
-(1) David's Slides.
-(2) Tutorial ExaGeoStatR.
-(3) Documentations (ExaGeoStat).
-(4) Handout.
-(5) PPoMSA Paper.
+(1) David's Slides.<br />
+(2) Tutorial ExaGeoStatR.<br />
+(3) Documentations (ExaGeoStat).<br />
+(4) Handout.<br />
+(5) PPoMSA Paper.<br />
