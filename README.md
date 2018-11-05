@@ -19,7 +19,7 @@
 (20) Handout.<br />
 (21) Release.<br />
 Tomorrow
-(1) David's Slides.<br />
+(1) David's Slides. (done)<br />
 (2) Tutorial ExaGeoStatR.<br />
 (3) Documentations (ExaGeoStat).(done)<br />
 (4) Handout.<br />
