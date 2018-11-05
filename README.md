@@ -21,7 +21,7 @@
 Tomorrow
 (1) David's Slides.<br />
 (2) Tutorial ExaGeoStatR.<br />
-(3) Documentations (ExaGeoStat).<br />
+(3) Documentations (ExaGeoStat).(done)<br />
 (4) Handout.<br />
 (5) PPoMSA Paper.<br />
 (7) Print Optimization Paper.<br />
