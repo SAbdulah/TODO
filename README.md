@@ -26,5 +26,5 @@ Tomorrow
 (5) PPoMSA Paper.<br />
 (7) Print Optimization Paper.<br />
 (8) Print statistics book.<br />
-(9) Daycare (done)
+(9) N=1600 experiment.
 
