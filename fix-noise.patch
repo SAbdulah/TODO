@@ -1,0 +1,13 @@
+diff --git a/exageostat_exact/core/compute/core_dcmg.c b/exageostat_exact/core/compute/core_dcmg.c
+index 075a3a6..7a80027 100644
+--- a/exageostat_exact/core/compute/core_dcmg.c
++++ b/exageostat_exact/core/compute/core_dcmg.c
+@@ -112,7 +112,7 @@ void core_dcmg (double * A, int m, int n, int m0, int n0, location  *l1, locatio
+ 			l2y = l2->y[i+m0];
+                         expr = calculateDistance(l1x, l1y, l2x, l2y, distance_metric)/localtheta[1];
+ 			if(expr == 0)
+-                                A[i + j * m] = sigma_square + 1e-4;
++                                A[i + j * m] = sigma_square; /* + 1e-4*/;
+                         else
+                                 A[i + j * m] = con*pow(expr, localtheta[2])*gsl_sf_bessel_Knu(localtheta[2],expr); // Matern Function
+ 
