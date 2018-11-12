@@ -20,4 +20,9 @@ Tomorrow
 (7) Print Optimization Paper.<br />
 (8) Print statistics book.<br />
 (9) N=1600 experiment.
+Today:
+(1) slides for David
+(2) ibex
+(3) read more in statistics
+
 
