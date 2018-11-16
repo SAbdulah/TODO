@@ -34,8 +34,8 @@ echo '. '$MKLROOT'/bin/mklvars.sh intel64' >> ~/.bashrc
 echo 'export MKLROOT='$MKL_DIR >> ~/.bashrc
 
 
-rm -rf exageostatR-dev
-git clone https://github.com/ecrc/exageostatR-dev.git
+rm -rf exageostatR
+git clone https://github.com/ecrc/exageostatR.git
 export DIR=$PWD
 ==============================
 if [ ! -d "nlopt-2.4.2" ]; then
@@ -52,16 +52,16 @@ export PKG_CONFIG_PATH=$NLOPTROOT/nlopt_install/lib/pkgconfig:$PKG_CONFIG_PATH
 echo 'export PKG_CONFIG_PATH='$NLOPTROOT'/nlopt_install/lib/pkgconfig:$PKG_CONFIG_PATH' >> ~/.bashrc
 ==============================
 cd $DIR
-cd exageostatR-dev/
+cd exageostatR/
 git checkout sabdulah/fix-srand-bug
 git pull
 git submodule update --init --recursive
 
 export EXAGEOSTATDEVDIR=$PWD/src
 cd $EXAGEOSTATDEVDIR
-export HICMADIR=$EXAGEOSTATDEVDIR/hicma-dev
-export CHAMELEONDIR=$EXAGEOSTATDEVDIR/hicma-dev/chameleon
-export STARSHDIR=$EXAGEOSTATDEVDIR/stars-h-dev
+export HICMADIR=$EXAGEOSTATDEVDIR/hicma
+export CHAMELEONDIR=$EXAGEOSTATDEVDIR/hicma/chameleon
+export STARSHDIR=$EXAGEOSTATDEVDIR/stars-h
 
 ## STARS-H
 cd $STARSHDIR
@@ -73,7 +73,7 @@ make -j
 make install
 
 export PKG_CONFIG_PATH=$STARSHDIR/install_dir/lib/pkgconfig:$PKG_CONFIG_PATH
-echo 'PKG_CONFIG_PATH='$STARSHDIR'/install_dir/lib/pkgconfig:$PKG_CONFIG_PATH' >> ~/.bashrc
+echo 'export PKG_CONFIG_PATH='$STARSHDIR'/install_dir/lib/pkgconfig:$PKG_CONFIG_PATH' >> ~/.bashrc
 
 ## CHAMELEON
 cd $CHAMELEONDIR
@@ -86,8 +86,9 @@ make install
 
 export PKG_CONFIG_PATH=$CHAMELEONDIR/install_dir/lib/pkgconfig:$PKG_CONFIG_PATH
 echo 'export PKG_CONFIG_PATH='$CHAMELEONDIR'/install_dir/lib/pkgconfig:$PKG_CONFIG_PATH' >> ~/.bashrc
-export CPATH='$CPATH:$CHAMELEONDIR/install_dir/include/coreblas'
+export CPATH=$CHAMELEONDIR/install_dir/include/coreblas:$CPATH
 echo 'export CPATH='$CHAMELEONDIR'/install_dir/include/coreblas:$CPATH' >> ~/.bashrc
+export LD_LIBRARY_PATH=$CHAMELEONDIR/install_dir/lib/:$LD_LIBRARY_PATH
 echo 'export LD_LIBRARY_PATH='$CHAMELEONDIR'/install_dir/lib/:$LD_LIBRARY_PATH' >> ~/.bashrc
 
 
@@ -102,7 +103,8 @@ make install
 
 export PKG_CONFIG_PATH=$HICMADIR/install_dir/lib/pkgconfig:$PKG_CONFIG_PATH
 echo 'export PKG_CONFIG_PATH='$HICMADIR'/install_dir/lib/pkgconfig:$PKG_CONFIG_PATH' >> ~/.bashrc
-echo 'export export LD_LIBRARY_PATH='$HICMADIR'/install_dir/lib/:$LD_LIBRARY_PATH' >> ~/.bashrc
+export LD_LIBRARY_PATH=$HICMADIR/install_dir/lib/:$LD_LIBRARY_PATH
+echo 'export LD_LIBRARY_PATH='$HICMADIR'/install_dir/lib/:$LD_LIBRARY_PATH' >> ~/.bashrc
 echo '## EXAGEOSTAT-INSTALLATION-END' >> ~/.bashrc
 
 cd $DIR
@@ -113,7 +115,7 @@ echo $PWD
 
 . ~/.bashrc
 ## Modify src/Makefile, compilation flagss -> flagsl
-R CMD build exageostatR-dev
+R CMD build exageostatR
 
-
+R CMD INSTALL exageostat_1.0.0.tar.gz 
 #mkdir R-libraries
