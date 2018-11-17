@@ -9,7 +9,6 @@ Mixed precision support for ExaGeoStat
 (1) implementation<br />
 
 OOC 
-===
 (1) Finalizing the OOC Experiments.<br />
 
 %%%%%%%%%%%%%%%%%%%%
