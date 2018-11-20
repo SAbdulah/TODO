@@ -2,7 +2,7 @@
 PASC Paper
 
 Guided MLE
-(1)![#f03c15](https://placehold.it/15/f03c15/000000?text=+)  `write two main examples for Guided MLE on real datasets and synthetic datasets.`<br />
+(1) write two main examples for Guided MLE on real datasets and synthetic datasets.<br />
 (2) Finalizing the Guided MLE Results.<br />
 
 Mixed precision support for ExaGeoStat
@@ -23,7 +23,7 @@ EM Algorithm
 
 TODO
 (1) 3 slides for David.<br />
-(2) ![#f03c15](https://placehold.it/15/f03c15/000000?text=+) `Eduardo, easier installatioin steps for ExaG3oStatR`
+(2) Eduardo, easier installatioin steps for ExaG3oStatR. <br /> 
 (3) Rabab: Memory software(after IPDPS).<br />
 (4) Rabab: Python scripts(after IPDPS).<br />
 
