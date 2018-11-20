@@ -33,16 +33,18 @@ Downscale
 Reading,
 (1) statistics book.
 
-sabdulah/guided-mle               (under developing)
-sabdulah/mixed-precision          (under developing)  -- Start with this.   (Stable for PASC)
-sabdulah/mixed-precision-dense    (ignore) 
-sabdulah/smart_mle_fold           (stable GMLE)                             (Stable for PASC)
-sabdulah/multiplicative-scale     (done but still think about merge)
-sabdulah/sdt-lr-support           (under developing)
-sabdulah/downscale-stable-commit  (stable for downscale)
-sabdulah/add-more-examples        (ignore)
-sabdulah/clean-code               (ignore)
-sabdulah/cleanplasma              (plasma-ignore)
-sabdulah/scalapack-dev            (scalapack-ignore) 
+
+
+sabdulah/guided-mle               (under developing)<br />
+sabdulah/mixed-precision          (under developing)  -- Start with this.   (Stable for PASC)<br />
+sabdulah/mixed-precision-dense    (ignore) <br />
+sabdulah/smart_mle_fold           (stable GMLE)                             (Stable for PASC)<br />
+sabdulah/multiplicative-scale     (done but still think about merge)<br />
+sabdulah/sdt-lr-support           (under developing)<br />
+sabdulah/downscale-stable-commit  (stable for downscale)<br />
+sabdulah/add-more-examples        (ignore)<br />
+sabdulah/clean-code               (ignore)<br />
+sabdulah/cleanplasma              (plasma-ignore)<br />
+sabdulah/scalapack-dev            (scalapack-ignore) <br />
 
 
