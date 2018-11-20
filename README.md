@@ -34,9 +34,9 @@ Reading,
 (1) statistics book.
 
 sabdulah/guided-mle               (under developing)
-sabdulah/mixed-precision          (under developing)  -- Start with this.
-sabdulah/mixed-precision-dense    (ingore)
-sabdulah/smart_mle_fold           (stable GMLE)
+sabdulah/mixed-precision          (under developing)  -- Start with this.   (Stable for PASC)
+sabdulah/mixed-precision-dense    (ignore) 
+sabdulah/smart_mle_fold           (stable GMLE)                             (Stable for PASC)
 sabdulah/multiplicative-scale     (done but still think about merge)
 sabdulah/sdt-lr-support           (under developing)
 sabdulah/downscale-stable-commit  (stable for downscale)
