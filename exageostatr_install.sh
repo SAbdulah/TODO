@@ -34,8 +34,8 @@ echo '. '$MKLROOT'/bin/mklvars.sh intel64' >> ~/.bashrc
 echo 'export MKLROOT='$MKL_DIR >> ~/.bashrc
 
 
-rm -rf exageostatR
-git clone https://github.com/ecrc/exageostatR.git
+rm -rf exageostatR-dev
+git clone https://github.com/ecrc/exageostatR-dev.git
 export DIR=$PWD
 ==============================
 if [ ! -d "nlopt-2.4.2" ]; then
@@ -52,8 +52,8 @@ export PKG_CONFIG_PATH=$NLOPTROOT/nlopt_install/lib/pkgconfig:$PKG_CONFIG_PATH
 echo 'export PKG_CONFIG_PATH='$NLOPTROOT'/nlopt_install/lib/pkgconfig:$PKG_CONFIG_PATH' >> ~/.bashrc
 ==============================
 cd $DIR
-cd exageostatR/
-git checkout sabdulah/fix-srand-bug
+cd exageostatR-dev/
+git checkout sabdulah/fix-src-submodule
 git pull
 git submodule update --init --recursive
 
@@ -115,7 +115,7 @@ echo $PWD
 
 . ~/.bashrc
 ## Modify src/Makefile, compilation flagss -> flagsl
-R CMD build exageostatR
+R CMD build exageostatR-dev
 
 R CMD INSTALL exageostat_1.0.0.tar.gz 
 #mkdir R-libraries
