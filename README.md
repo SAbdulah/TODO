@@ -35,16 +35,9 @@ Reading,
 
 
 
-sabdulah/guided-mle               (under developing)<br />
-sabdulah/mixed-precision          (under developing)  -- Start with this.   (Stable for PASC)<br />
-sabdulah/mixed-precision-dense    (ignore) <br />
-sabdulah/smart_mle_fold           (stable GMLE)                             (Stable for PASC)<br />
-sabdulah/multiplicative-scale     (done but still think about merge)<br />
-sabdulah/sdt-lr-support           (under developing)<br />
-sabdulah/downscale-stable-commit  (stable for downscale)<br />
-sabdulah/add-more-examples        (ignore)<br />
-sabdulah/clean-code               (ignore)<br />
-sabdulah/cleanplasma              (plasma-ignore)<br />
-sabdulah/scalapack-dev            (scalapack-ignore) <br />
+=========
+Email about mixed-precision results and permission to join Nividia Workshop.
+Yuxioa and Jian problems
+Yiping Problem
 
 
