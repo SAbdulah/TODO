@@ -37,6 +37,7 @@ Reading,
 
 =========
 Email about mixed-precision results and permission to join Nividia Workshop.
+Coding:  (i,j) , (j,i) tiles on the same node, real dataset data movement.   
 Yuxioa and Jian problems
 Yiping Problem
 
