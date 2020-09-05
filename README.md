@@ -1,3 +1,16 @@
+1- Write ML compitation draft.
+
+2- regenerate last dataset of the compititon paper.
+
+3- debug exageostat problem for mary on Shaheen
+
+4- finalize and upload the datasets to kaust repo.
+
+5-make forum for submitting the competation reponse.
+
+
+
+========================
 1- FIX MPI issue 
 
 
