@@ -1,3 +1,39 @@
+Tarballs are only required to store paths of up to 100 bytes and cannot
+store those of more than 256 bytes, with restrictions including to 100
+bytes for the final component.
+See section ‘Package structure’ in the ‘Writing R Extensions’ manual.
+* checking for sufficient/correct file permissions ... OK
+* checking whether package ‘MPCR’ can be installed ...
+
+
+
+ [31m/36m] OK
+* checking installed package size ... NOTE
+  installed size is  6.8Mb
+  sub-directories of 1Mb or more:
+    libs   6.4Mb
+* checking package directory ... OK
+* checking for future file timestamps ... OK
+* checking DESCRIPTION meta-information ... WARNING
+During startup - Warning messages:
+1: Setting LC_TIME failed, using "C" 
+2: Setting LC_MESSAGES failed, using "C" 
+3: Setting LC_MONETARY failed, using "C" 
+ ERROR
+During startup - Warning messages:
+1: Setting LC_TIME failed, using "C" 
+2: Setting LC_MESSAGES failed, using "C" 
+3: Setting LC_MONETARY failed, using "C" 
+* DONE
+
+Status: 1 ERROR, 3 WARNINGs, 4 NOTEs
+See
+  ‘/Users/samehabdulah/MPCR/..Rcheck/00check.log’
+for details.
+
+
+
+
 1- Write ML compitation draft.
 
 2- regenerate last dataset of the compititon paper.
